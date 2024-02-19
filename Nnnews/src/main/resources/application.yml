@@ -1,0 +1,20 @@
+Spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    #default-schema:
+    password: "123456"
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+
+  flyway:
+    url: jdbc:postgresql://localhost:5432/postgres
+    locations: classpath:db/migration
+    table: history_of_news
+    user: postgres
+    password: "123456"
+
+
